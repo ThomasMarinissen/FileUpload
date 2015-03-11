@@ -1,8 +1,12 @@
 {
-    "name": "ThomasMarinissen/FileUpload",
-    "autoload": {
-	"psr-4": {
-            "Th\\FileUploader\\": "src"
-        }
+  "name": "th/fileuploader",
+  "description": "Small library to help upload files",
+  "require": {
+    "php": ">=5.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Th\\FileUploader\\": "src"
     }
+  }
 }
