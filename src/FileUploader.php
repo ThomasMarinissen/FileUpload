@@ -317,12 +317,6 @@ class FileUploader {
         // set the file name
         $this->name = $filename . '.' . $this->extension;
         
-        // if the file already exists, fix it by adding the microtime to the
-        // file name
-        if ($this->fileExists()) {
-            $this->name = $filename . str_replace('.', '', microtime(true)) . '.' . $this->extension();
-        }
-        
         // done, return the instance of this, to make chaining possible
         return $this;
     }
@@ -379,16 +373,6 @@ class FileUploader {
         
         // done, return the instance of this, to make chaining possible
         return $this;
-    }
-    
-    /**
-     * Helper function to check if a media item already exists
-     * 
-     * @return boolean                  Whether the media item already exists
-     */
-    public function fileExists() {
-        // return the whether the media item with the slug already exists
-        return file_exists($this->uploadFilePath());
     }
 
     /**
