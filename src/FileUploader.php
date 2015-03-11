@@ -312,7 +312,7 @@ class FileUploader {
         $pathinfo = pathinfo($name);
         
         // get the base file name
-        $filename = Ivaldi_Controller_Router_Route_Database::sanitize($pathinfo['filename']);
+        $filename = $pathinfo['filename'];
         
         // set the file name
         $this->name = $filename . '.' . $this->extension;
