@@ -1,0 +1,8 @@
+{
+    "name": "ThomasMarinissen/FileUpload",
+    "autoload": {
+	"psr-4": {
+            "Th\\FileUploader\\": "src"
+        }
+    }
+}
